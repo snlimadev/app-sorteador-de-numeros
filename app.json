@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Sorteador",
+    "slug": "sorteador-de-numeros",
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#90EE90"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.snlimadev.sorteador",
+      "versionCode": 4,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#90EE90"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1e3d2d54-0203-47ea-bedb-1d0e08d8b42e"
+      }
+    }
+  }
+}
