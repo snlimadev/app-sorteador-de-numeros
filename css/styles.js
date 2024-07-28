@@ -12,6 +12,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  containerTelaInicial: {
+    width: '90%',
+    paddingHorizontal: 20,
+  },
+
   espacoInferior: {
     paddingBottom: 20,
   },
