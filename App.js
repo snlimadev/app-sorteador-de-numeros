@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -16,8 +17,14 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
+      <StatusBar style='dark' />
 
-      <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: 'lightgreen' }, headerTitleStyle: { fontWeight: 'bold' } }}>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: { backgroundColor: 'lightgreen' },
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}
+      >
         <Stack.Screen name="Escolha o tipo de sorteio" component={TelaInicial} />
         <Stack.Screen name="Personalizado" component={Personalizado} />
         <Stack.Screen name="Mega-Sena" component={MegaSena} />
@@ -28,7 +35,6 @@ export default function App() {
         <Stack.Screen name="Dupla Sena" component={DuplaSena} />
         <Stack.Screen name="Dia de Sorte" component={DiaDeSorte} />
       </Stack.Navigator>
-
     </NavigationContainer>
   );
 }
