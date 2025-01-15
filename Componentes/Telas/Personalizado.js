@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { View, ScrollView, Text, Button, TextInput, ImageBackground, Keyboard } from 'react-native';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 import styles from '../../css/styles';
 import imagemDeFundo from '../../assets/imagemDeFundo.jpg';
 import { sorteiaNumeros } from '../Funcoes';
 import BotaoCompartilhar from '../BotaoCompartilhar';
+
+const BANNER_ID = 'ca-app-pub-4878437225305198/5754571359';
 
 export default function Personalizado() {
   const [inputEmFoco, setInputEmFoco] = useState('');
@@ -85,6 +88,14 @@ export default function Personalizado() {
 
         </View>
       </ScrollView>
+
+      <BannerAd
+        unitId={(__DEV__) ? TestIds.BANNER : BANNER_ID}
+        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+        requestOptions={{
+          requestNonPersonalizedAdsOnly: true
+        }}
+      />
 
     </ImageBackground>
   );

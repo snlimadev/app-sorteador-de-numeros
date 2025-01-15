@@ -1,9 +1,12 @@
 import { View, ScrollView, Text, Button, ImageBackground } from 'react-native';
 import { SelectList } from 'react-native-dropdown-select-list';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 import styles from '../css/styles';
 import imagemDeFundo from '../assets/imagemDeFundo.jpg';
 import BotaoCompartilhar from './BotaoCompartilhar';
+
+const BANNER_ID = 'ca-app-pub-4878437225305198/7070720128';
 
 export default function BoxSorteio(props) {
   const exibeBotaoCompartilhar = (props.resultado !== '' && !props.resultado.startsWith('Não foi possível sortear')) ? <BotaoCompartilhar mensagem={props.resultado} /> : <></>
@@ -41,6 +44,14 @@ export default function BoxSorteio(props) {
 
         </View>
       </ScrollView>
+
+      <BannerAd
+        unitId={(__DEV__) ? TestIds.BANNER : BANNER_ID}
+        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+        requestOptions={{
+          requestNonPersonalizedAdsOnly: true
+        }}
+      />
 
     </ImageBackground>
   );

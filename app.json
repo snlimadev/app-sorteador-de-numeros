@@ -2,7 +2,7 @@
   "expo": {
     "name": "Sorteador",
     "slug": "sorteador-de-numeros",
-    "version": "1.0.5",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,7 +19,7 @@
     },
     "android": {
       "package": "com.snlimadev.sorteador",
-      "versionCode": 6,
+      "versionCode": 7,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#90EE90"
@@ -48,5 +48,8 @@
         }
       ]
     ]
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-4878437225305198~4697205204"
   }
 }
