@@ -2,7 +2,7 @@
   "expo": {
     "name": "Sorteador",
     "slug": "sorteador-de-numeros",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -11,15 +11,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#90EE90"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "package": "com.snlimadev.sorteador",
-      "versionCode": 7,
+      "versionCode": 8,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#90EE90"
@@ -38,12 +35,9 @@
         "expo-build-properties",
         {
           "android": {
-            "compileSdkVersion": 33,
+            "compileSdkVersion": 34,
             "targetSdkVersion": 35,
-            "buildToolsVersion": "33.0.0"
-          },
-          "ios": {
-            "deploymentTarget": "13.4"
+            "buildToolsVersion": "34.0.0"
           }
         }
       ]

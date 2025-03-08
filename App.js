@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import TelaInicial from './Componentes/Telas/TelaInicial';
 import Personalizado from './Componentes/Telas/Personalizado';
@@ -12,7 +12,7 @@ import Timemania from './Componentes/Telas/Timemania';
 import DuplaSena from './Componentes/Telas/DuplaSena';
 import DiaDeSorte from './Componentes/Telas/DiaDeSorte';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
