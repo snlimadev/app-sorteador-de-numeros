@@ -2,7 +2,7 @@
   "expo": {
     "name": "Sorteador",
     "slug": "sorteador-de-numeros",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,7 +16,7 @@
     },
     "android": {
       "package": "com.snlimadev.sorteador",
-      "versionCode": 8,
+      "versionCode": 9,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#90EE90"
@@ -36,7 +36,7 @@
         {
           "android": {
             "compileSdkVersion": 34,
-            "targetSdkVersion": 35,
+            "targetSdkVersion": 34,
             "buildToolsVersion": "34.0.0"
           }
         }
