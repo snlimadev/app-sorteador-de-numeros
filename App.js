@@ -1,3 +1,5 @@
+import { KeyboardAvoidingView, Platform } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,22 +21,28 @@ export default function App() {
     <NavigationContainer>
       <StatusBar style='dark' />
 
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: { backgroundColor: 'lightgreen' },
-          headerTitleStyle: { fontWeight: 'bold' }
-        }}
-      >
-        <Stack.Screen name="Escolha o tipo de sorteio" component={TelaInicial} />
-        <Stack.Screen name="Personalizado" component={Personalizado} />
-        <Stack.Screen name="Mega-Sena" component={MegaSena} />
-        <Stack.Screen name="Lotofácil" component={Lotofacil} />
-        <Stack.Screen name="Quina" component={Quina} />
-        <Stack.Screen name="Lotomania" component={Lotomania} />
-        <Stack.Screen name="Timemania" component={Timemania} />
-        <Stack.Screen name="Dupla Sena" component={DuplaSena} />
-        <Stack.Screen name="Dia de Sorte" component={DiaDeSorte} />
-      </Stack.Navigator>
+      <SafeAreaView style={{ flex: 1 }} edges={['bottom']}>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: 'lightgreen' },
+            headerTitleStyle: { fontWeight: 'bold' }
+          }}
+        >
+          <Stack.Screen name="Escolha o tipo de sorteio" component={TelaInicial} />
+          <Stack.Screen name="Personalizado" component={Personalizado} />
+          <Stack.Screen name="Mega-Sena" component={MegaSena} />
+          <Stack.Screen name="Lotofácil" component={Lotofacil} />
+          <Stack.Screen name="Quina" component={Quina} />
+          <Stack.Screen name="Lotomania" component={Lotomania} />
+          <Stack.Screen name="Timemania" component={Timemania} />
+          <Stack.Screen name="Dupla Sena" component={DuplaSena} />
+          <Stack.Screen name="Dia de Sorte" component={DiaDeSorte} />
+        </Stack.Navigator>
+
+        {(Platform.OS === 'android' && Platform.Version >= 35) && (
+          <KeyboardAvoidingView behavior='padding' />
+        )}
+      </SafeAreaView>
     </NavigationContainer>
   );
 }
